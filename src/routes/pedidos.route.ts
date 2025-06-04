@@ -17,7 +17,7 @@ router.get("/", (rq, rs) => {
 router.post("/", (rq, rs) => {
   const nuevoPedidos: Pedidos = rq.body;
   Pedidoscontrollers
-    .getPedidos()
+    .createPedidos(nuevoPedidos)
     .then((obj) => {
       rs.status(201).json(obj);
     })

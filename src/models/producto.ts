@@ -1,5 +1,3 @@
-import { Date } from "mssql";
-
 export interface producto {
   id: number;
   nombre: string;

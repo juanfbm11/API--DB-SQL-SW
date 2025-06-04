@@ -1,8 +1,11 @@
-import { Date } from "mssql";
-
-export interface Pedidos{
-    id:number;
-    nombre: String;
-    fechaCompra:Date;
-    total: number;
+export interface Pedidos {
+  id: number;
+  fechaCompra:string;
+  email: string;
+  nombre: string;
+  ciudad: string;
+  direccion: string;
+  tipoEnvio: string;
+  metodoPago: string;
+  total: number;
 }

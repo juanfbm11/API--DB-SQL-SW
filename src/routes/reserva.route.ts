@@ -14,10 +14,10 @@ router.get("/", (rq, rs) => {
     });
 });
 
-router.post("/", (rq, rs) => {
+router.post("/", (rq, rs) => { 
   const nuevoReserva: reserva = rq.body;
   reservacontrollers
-    .getReserva()
+    .createReserva(nuevoReserva) 
     .then((obj) => {
       rs.status(201).json(obj);
     })

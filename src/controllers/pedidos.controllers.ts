@@ -3,23 +3,26 @@ import { Pedidos } from '../models/pedidos';
 
 export const getPedidos = async (): Promise<Pedidos[]> => {
     try {
-      let u = await Pedidosdao.listar();
-      return u;
+      let p = await Pedidosdao.listar();
+      return p;
     } catch (error) {
       throw error;
     }
   };
 
-  export const createPedidos = async (Pedidos:Pedidos): Promise<Pedidos> =>{
+  export const createPedidos = async (p : Pedidos): Promise<Pedidos> =>{
     try {
-      let a = await Pedidosdao.createPedidos(Pedidos);
-      return  a;
+      let x = await Pedidosdao.createPedidos(p);
+      return  x;
     } catch (error) {
       throw error;
     }
   };
 
-  export const updatePedidos = async (id: number, Pedidos: Pedidos): Promise<Pedidos> => {
+  export const updatePedidos = async (
+    id: number, 
+    Pedidos: Pedidos
+  ): Promise<Pedidos> => {
       try {
           return await Pedidosdao.updatePedidos(id,Pedidos);
       } catch (error) {

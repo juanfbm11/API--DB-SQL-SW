@@ -1,10 +1,6 @@
-import { Date } from "mssql";
-
-
-export interface reserva{
-    fechaReserva(arg0: string, fechaReserva: any): unknown;
+export interface reserva{    
     id:number;
     nombre:string;
-    fechaRegistro:Date;
+    fechaReserva:Date;
     total : number;
 }
